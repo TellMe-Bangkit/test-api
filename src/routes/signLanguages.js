@@ -1,34 +1,34 @@
 const {
-  getSignLanguages,
+  createSignLanguages,
+  getAllSignLanguages,
   getSignLanguages,
   updateSignLanguages,
   deleteSignLnguages,
-  getAllSignLanguages,
 } = require("../handler/signLanguages");
 
 const signLanguagesRoutes = [
   {
-    methode: "POST",
+    method: "POST",
     path: "/sign-language",
     handler: createSignLanguages,
   },
   {
-    mathode: "GET",
-    path: "/sign-language",
+    method: "GET",
+    path: "/all-sign-language",
     handler: getAllSignLanguages,
   },
   {
-    methode: "GET",
+    method: "GET",
     path: "/sign-language",
     handler: getSignLanguages,
   },
   {
-    methode: "PUT",
+    method: "PUT",
     path: "/sign-language/{id}",
     handler: updateSignLanguages,
   },
   {
-    methode: "DELETE",
+    method: "DELETE",
     path: "/sign-language/{id}",
     handler: deleteSignLnguages,
   },
