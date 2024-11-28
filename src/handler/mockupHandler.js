@@ -1,29 +1,28 @@
 const { nanoid } = require("nanoid");
 
 let mockupData = [
-    {
-      id: "1",
-      title: "Homepage Mockup",
-      content: "This is the mockup for the homepage design.",
-      createdAt: "2024-11-01T10:00:00.000Z",
-      updatedAt: "2024-11-01T10:00:00.000Z",
-    },
-    {
-      id: "2",
-      title: "Login Page Mockup",
-      content: "This is the mockup for the login page design.",
-      createdAt: "2024-11-02T10:00:00.000Z",
-      updatedAt: "2024-11-02T10:00:00.000Z",
-    },
-    {
-      id: "3",
-      title: "Dashboard Mockup",
-      content: "This is the mockup for the dashboard interface.",
-      createdAt: "2024-11-03T10:00:00.000Z",
-      updatedAt: "2024-11-03T10:00:00.000Z",
-    },
-  ];
-  
+  {
+    id: "1",
+    title: "Homepage Mockup",
+    content: "This is the mockup for the homepage design.",
+    createdAt: "2024-11-01T10:00:00.000Z",
+    updatedAt: "2024-11-01T10:00:00.000Z",
+  },
+  {
+    id: "2",
+    title: "Login Page Mockup",
+    content: "This is the mockup for the login page design.",
+    createdAt: "2024-11-02T10:00:00.000Z",
+    updatedAt: "2024-11-02T10:00:00.000Z",
+  },
+  {
+    id: "3",
+    title: "Dashboard Mockup",
+    content: "This is the mockup for the dashboard interface.",
+    createdAt: "2024-11-03T10:00:00.000Z",
+    updatedAt: "2024-11-03T10:00:00.000Z",
+  },
+];
 
 // Create a new mockup entry
 const createMockup = (request, h) => {

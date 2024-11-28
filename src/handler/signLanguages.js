@@ -131,10 +131,30 @@ const deleteSignLnguages = (request, h) => {
   return h.response({ msg: "data not found" }).code(404);
 };
 
+const detectSignLanguage = async (request, h) => {
+  const { gestureImage } = request.payload;
+
+  if (!gestureImage) {
+    return h.response({ message: "No image provided" }).code(400);
+  }
+
+  // Simulasi proses deteksi gesture
+  // Anda bisa mengganti ini dengan TensorFlow.js atau model lain untuk deteksi gesture sebenarnya
+  const detectedSign = "A"; // Contoh, ini hasil dummy
+
+  return h
+    .response({
+      message: "Gesture detected successfully",
+      detectedSign,
+    })
+    .code(200);
+};
+
 module.exports = {
   createSignLanguages,
   getAllSignLanguages,
   getSignLanguages,
   updateSignLanguages,
   deleteSignLnguages,
+  detectSignLanguage,
 };

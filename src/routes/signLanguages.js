@@ -4,6 +4,7 @@ const {
   getSignLanguages,
   updateSignLanguages,
   deleteSignLnguages,
+  detectSignLanguage,
 } = require("../handler/signLanguages");
 
 const signLanguagesRoutes = [
@@ -31,6 +32,19 @@ const signLanguagesRoutes = [
     method: "DELETE",
     path: "/sign-language/{id}",
     handler: deleteSignLnguages,
+  },
+  {
+    method: "POST",
+    path: "/detect-sign",
+    options: {
+      payload: {
+        maxBytes: 2097152, // 2MB batas maksimal ukuran file
+        output: "stream", // Untuk menangani file upload sebagai stream
+        parse: true,
+        allow: "multipart/form-data", // Untuk mendukung form dengan file upload
+      },
+    },
+    handler: detectSignLanguage,
   },
 ];
 
