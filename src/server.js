@@ -1,6 +1,7 @@
 const Hapi = require("@hapi/hapi");
 const { signLanguagesRoutes } = require("./routes/signLanguages");
 const { mockupRoutes } = require("./routes/mockupRoutes");
+const { gestureRoutes } = require("./routes/gestureRoutes");
 
 const init = async () => {
   const server = Hapi.server({
@@ -11,6 +12,7 @@ const init = async () => {
   //Register Routes
   server.route(signLanguagesRoutes);
   server.route(mockupRoutes);
+  server.route(gestureRoutes);
 
   await server.start();
   console.log(`Server berjalan pada ${server.info.uri}`);
